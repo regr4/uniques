@@ -1,0 +1,22 @@
+# found with for i in $(seq 10); do /usr/bin/time -o times.txt -a ./target/release/uniques-rs; done
+
+42.20user 0.01system 0:42.24elapsed 99%CPU (0avgtext+0avgdata 32532maxresident)k
+0inputs+0outputs (0major+6796minor)pagefaults 0swaps
+37.68user 0.01system 0:37.72elapsed 99%CPU (0avgtext+0avgdata 32432maxresident)k
+0inputs+0outputs (0major+6794minor)pagefaults 0swaps
+37.73user 0.01system 0:37.76elapsed 99%CPU (0avgtext+0avgdata 32376maxresident)k
+0inputs+0outputs (0major+6795minor)pagefaults 0swaps
+37.66user 0.02system 0:37.71elapsed 99%CPU (0avgtext+0avgdata 32332maxresident)k
+0inputs+0outputs (0major+6792minor)pagefaults 0swaps
+37.68user 0.01system 0:37.72elapsed 99%CPU (0avgtext+0avgdata 32360maxresident)k
+0inputs+0outputs (0major+6792minor)pagefaults 0swaps
+37.64user 0.01system 0:37.67elapsed 99%CPU (0avgtext+0avgdata 32420maxresident)k
+0inputs+0outputs (0major+6796minor)pagefaults 0swaps
+37.80user 0.01system 0:37.83elapsed 99%CPU (0avgtext+0avgdata 32308maxresident)k
+0inputs+0outputs (0major+6793minor)pagefaults 0swaps
+37.58user 0.01system 0:37.61elapsed 99%CPU (0avgtext+0avgdata 32480maxresident)k
+0inputs+0outputs (0major+6796minor)pagefaults 0swaps
+37.69user 0.01system 0:37.72elapsed 99%CPU (0avgtext+0avgdata 32296maxresident)k
+0inputs+0outputs (0major+6792minor)pagefaults 0swaps
+37.64user 0.00system 0:37.66elapsed 99%CPU (0avgtext+0avgdata 32400maxresident)k
+0inputs+0outputs (0major+6794minor)pagefaults 0swaps
