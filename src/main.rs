@@ -5,11 +5,11 @@ use std::{
     sync::{Mutex, RwLock},
 };
 
-const WORDS: &str = include_str!("words_alpha.txt");
+const WORDS: &[u8] = include_bytes!("words_alpha.txt");
 
 fn main() {
     let mut words_list: Vec<WordSet> = WORDS
-        .par_split_whitespace()
+        .par_split(u8::is_ascii_whitespace)
         .filter(|w| w.len() == 5)
         .map(WordSet::from_word)
         .filter(|w| w.size() == 5)
@@ -74,31 +74,31 @@ fn main() {
 
     println!("found all solutions");
 
-    let inv: RwLock<HashMap<WordSet, String>> = RwLock::new(HashMap::new());
+    let inv: RwLock<HashMap<WordSet, Vec<u8>>> = RwLock::new(HashMap::new());
     solutions.par_iter().for_each(|solution| {
         let Solution(w1, w2, w3, w4, w5) = *solution;
 
-        let res = Mutex::new("solution:\n".to_string());
+        let res = Mutex::new(b"solution:\n".to_vec());
 
         for w_n in &[w1, w2, w3, w4, w5] {
             let inv_guard = inv.read().unwrap();
             if let Some(word) = inv_guard.get(w_n) {
                 let mut res = res.lock().unwrap();
-                res.push_str(word);
-                res.push('\n');
+                res.extend_from_slice(word);
+                res.push(b'\n');
                 drop(inv_guard)
             } else {
                 drop(inv_guard);
                 // find the first word that gives w_n and save it in inv to save time if it shows up again
                 let found_word = WORDS
-                    .par_split_whitespace()
+                    .par_split(u8::is_ascii_whitespace)
                     .filter(|wd| wd.len() == 5)
                     .find_any(|word| WordSet::from_word(word) == *w_n)
                     .unwrap();
 
                 let mut res = res.lock().unwrap();
-                res.push_str(found_word);
-                res.push('\n');
+                res.extend_from_slice(found_word);
+                res.push(b'\n');
                 drop(res);
 
                 inv.write().unwrap().insert(*w_n, found_word.to_owned());
@@ -106,7 +106,10 @@ fn main() {
         }
 
         let res = res.into_inner().unwrap();
-        println!("{res}");
+	unsafe {
+	    // SAFETY: all words should consist only of valid ascii
+            println!("{}", &std::str::from_utf8_unchecked(&res));
+	}
     });
 
     println!("done! found {} solutions", solutions.len());
@@ -130,9 +133,9 @@ impl WordSet {
         res
     }
 
-    fn from_word(word: &str) -> Self {
+    fn from_word(word: &[u8]) -> Self {
         let mut res = 0;
-        for ix in word.to_uppercase().as_bytes().iter().map(|c| c - b'A') {
+        for ix in word.iter().map(|c| c.to_ascii_uppercase() - b'A') {
             res |= 1 << (25 - ix);
         }
         Self(res)

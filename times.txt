@@ -321,3 +321,25 @@
 0inputs+0outputs (0major+7303minor)pagefaults 0swaps
 76.23user 0.05system 0:04.90elapsed 1555%CPU (0avgtext+0avgdata 28636maxresident)k
 0inputs+0outputs (0major+7281minor)pagefaults 0swaps
+
+# switched to using &[u8] everywhere it mattered. seems to save about .3 seconds.
+73.35user 0.03system 0:04.76elapsed 1539%CPU (0avgtext+0avgdata 28696maxresident)k
+0inputs+0outputs (0major+7270minor)pagefaults 0swaps
+68.14user 0.05system 0:04.37elapsed 1558%CPU (0avgtext+0avgdata 28712maxresident)k
+0inputs+0outputs (0major+7277minor)pagefaults 0swaps
+71.94user 0.05system 0:04.61elapsed 1559%CPU (0avgtext+0avgdata 28688maxresident)k
+0inputs+0outputs (0major+7248minor)pagefaults 0swaps
+72.96user 0.01system 0:04.68elapsed 1557%CPU (0avgtext+0avgdata 28908maxresident)k
+0inputs+0outputs (0major+7298minor)pagefaults 0swaps
+72.18user 0.05system 0:04.63elapsed 1558%CPU (0avgtext+0avgdata 28916maxresident)k
+0inputs+0outputs (0major+7270minor)pagefaults 0swaps
+72.81user 0.04system 0:04.67elapsed 1558%CPU (0avgtext+0avgdata 28824maxresident)k
+0inputs+0outputs (0major+7292minor)pagefaults 0swaps
+73.02user 0.05system 0:04.69elapsed 1557%CPU (0avgtext+0avgdata 28972maxresident)k
+0inputs+0outputs (0major+7284minor)pagefaults 0swaps
+73.49user 0.02system 0:04.71elapsed 1559%CPU (0avgtext+0avgdata 28668maxresident)k
+0inputs+0outputs (0major+7262minor)pagefaults 0swaps
+72.69user 0.05system 0:04.66elapsed 1558%CPU (0avgtext+0avgdata 28688maxresident)k
+0inputs+0outputs (0major+7301minor)pagefaults 0swaps
+72.36user 0.03system 0:04.64elapsed 1557%CPU (0avgtext+0avgdata 28864maxresident)k
+0inputs+0outputs (0major+7278minor)pagefaults 0swaps
