@@ -190,3 +190,134 @@
 0inputs+0outputs (0major+7325minor)pagefaults 0swaps
 75.01user 0.02system 0:04.83elapsed 1551%CPU (0avgtext+0avgdata 28744maxresident)k
 0inputs+0outputs (0major+7303minor)pagefaults 0swaps
+
+96.14user 0.10system 0:06.26elapsed 1535%CPU (0avgtext+0avgdata 28788maxresident)k
+0inputs+0outputs (0major+7294minor)pagefaults 0swaps
+86.36user 0.03system 0:05.62elapsed 1535%CPU (0avgtext+0avgdata 28816maxresident)k
+0inputs+0outputs (0major+7265minor)pagefaults 0swaps
+70.30user 0.03system 0:04.53elapsed 1551%CPU (0avgtext+0avgdata 28688maxresident)k
+0inputs+0outputs (0major+7263minor)pagefaults 0swaps
+74.08user 0.05system 0:04.77elapsed 1552%CPU (0avgtext+0avgdata 28708maxresident)k
+0inputs+0outputs (0major+7274minor)pagefaults 0swaps
+75.24user 0.01system 0:04.85elapsed 1551%CPU (0avgtext+0avgdata 28800maxresident)k
+0inputs+0outputs (0major+7269minor)pagefaults 0swaps
+75.18user 0.07system 0:04.85elapsed 1550%CPU (0avgtext+0avgdata 28868maxresident)k
+0inputs+0outputs (0major+7335minor)pagefaults 0swaps
+74.94user 0.05system 0:04.83elapsed 1551%CPU (0avgtext+0avgdata 28676maxresident)k
+0inputs+0outputs (0major+7293minor)pagefaults 0swaps
+75.28user 0.09system 0:04.86elapsed 1549%CPU (0avgtext+0avgdata 29000maxresident)k
+0inputs+0outputs (0major+7302minor)pagefaults 0swaps
+75.40user 0.04system 0:04.86elapsed 1551%CPU (0avgtext+0avgdata 28868maxresident)k
+0inputs+0outputs (0major+7273minor)pagefaults 0swaps
+75.22user 0.05system 0:04.85elapsed 1551%CPU (0avgtext+0avgdata 28776maxresident)k
+0inputs+0outputs (0major+7290minor)pagefaults 0swaps
+
+# with `strip`, doesn't seem to make much difference
+96.31user 0.05system 0:06.26elapsed 1538%CPU (0avgtext+0avgdata 29008maxresident)k
+0inputs+0outputs (0major+7263minor)pagefaults 0swaps
+86.40user 0.06system 0:05.62elapsed 1536%CPU (0avgtext+0avgdata 28812maxresident)k
+0inputs+0outputs (0major+7295minor)pagefaults 0swaps
+70.53user 0.05system 0:04.55elapsed 1548%CPU (0avgtext+0avgdata 28860maxresident)k
+0inputs+0outputs (0major+7318minor)pagefaults 0swaps
+74.48user 0.04system 0:04.79elapsed 1553%CPU (0avgtext+0avgdata 28788maxresident)k
+0inputs+0outputs (0major+7309minor)pagefaults 0swaps
+75.96user 0.07system 0:04.95elapsed 1536%CPU (0avgtext+0avgdata 28796maxresident)k
+0inputs+0outputs (0major+7299minor)pagefaults 0swaps
+75.78user 0.11system 0:04.93elapsed 1537%CPU (0avgtext+0avgdata 28968maxresident)k
+0inputs+0outputs (0major+7287minor)pagefaults 0swaps
+76.03user 0.11system 0:05.05elapsed 1505%CPU (0avgtext+0avgdata 28856maxresident)k
+0inputs+0outputs (0major+7295minor)pagefaults 0swaps
+77.23user 0.12system 0:05.23elapsed 1478%CPU (0avgtext+0avgdata 28736maxresident)k
+0inputs+0outputs (0major+7254minor)pagefaults 0swaps
+75.75user 0.08system 0:04.92elapsed 1539%CPU (0avgtext+0avgdata 28712maxresident)k
+0inputs+0outputs (0major+7281minor)pagefaults 0swaps
+75.44user 0.03system 0:04.86elapsed 1551%CPU (0avgtext+0avgdata 28732maxresident)k
+0inputs+0outputs (0major+7313minor)pagefaults 0swaps
+
+# with strip = true in Cargo.toml
+97.53user 0.14system 0:06.35elapsed 1536%CPU (0avgtext+0avgdata 28924maxresident)k
+0inputs+0outputs (0major+7281minor)pagefaults 0swaps
+87.05user 0.06system 0:05.71elapsed 1525%CPU (0avgtext+0avgdata 28928maxresident)k
+0inputs+0outputs (0major+7292minor)pagefaults 0swaps
+72.07user 0.06system 0:04.65elapsed 1548%CPU (0avgtext+0avgdata 28764maxresident)k
+0inputs+0outputs (0major+7264minor)pagefaults 0swaps
+76.56user 0.11system 0:04.98elapsed 1539%CPU (0avgtext+0avgdata 28760maxresident)k
+0inputs+0outputs (0major+7279minor)pagefaults 0swaps
+76.54user 0.01system 0:04.93elapsed 1551%CPU (0avgtext+0avgdata 29000maxresident)k
+0inputs+0outputs (0major+7299minor)pagefaults 0swaps
+77.17user 0.07system 0:05.01elapsed 1542%CPU (0avgtext+0avgdata 29012maxresident)k
+0inputs+0outputs (0major+7264minor)pagefaults 0swaps
+77.13user 0.04system 0:05.00elapsed 1541%CPU (0avgtext+0avgdata 28912maxresident)k
+0inputs+0outputs (0major+7255minor)pagefaults 0swaps
+76.97user 0.03system 0:04.98elapsed 1544%CPU (0avgtext+0avgdata 28964maxresident)k
+0inputs+0outputs (0major+7271minor)pagefaults 0swaps
+76.89user 0.05system 0:04.96elapsed 1550%CPU (0avgtext+0avgdata 28928maxresident)k
+0inputs+0outputs (0major+7284minor)pagefaults 0swaps
+76.80user 0.03system 0:04.95elapsed 1551%CPU (0avgtext+0avgdata 28756maxresident)k
+0inputs+0outputs (0major+7280minor)pagefaults 0swaps
+
+# with opt-level = "z": clearly slower
+144.20user 0.05system 0:09.23elapsed 1562%CPU (0avgtext+0avgdata 28756maxresident)k
+0inputs+0outputs (0major+7249minor)pagefaults 0swaps
+153.96user 0.03system 0:09.82elapsed 1566%CPU (0avgtext+0avgdata 28864maxresident)k
+0inputs+0outputs (0major+7295minor)pagefaults 0swaps
+154.46user 0.11system 0:09.86elapsed 1567%CPU (0avgtext+0avgdata 28696maxresident)k
+0inputs+0outputs (0major+7295minor)pagefaults 0swaps
+154.73user 0.07system 0:09.87elapsed 1567%CPU (0avgtext+0avgdata 28752maxresident)k
+0inputs+0outputs (0major+7263minor)pagefaults 0swaps
+154.76user 0.08system 0:09.87elapsed 1567%CPU (0avgtext+0avgdata 28908maxresident)k
+0inputs+0outputs (0major+7262minor)pagefaults 0swaps
+155.66user 0.09system 0:09.96elapsed 1563%CPU (0avgtext+0avgdata 28968maxresident)k
+0inputs+0outputs (0major+7289minor)pagefaults 0swaps
+155.26user 0.07system 0:09.90elapsed 1567%CPU (0avgtext+0avgdata 28804maxresident)k
+0inputs+0outputs (0major+7290minor)pagefaults 0swaps
+155.32user 0.04system 0:09.90elapsed 1568%CPU (0avgtext+0avgdata 28672maxresident)k
+0inputs+0outputs (0major+7291minor)pagefaults 0swaps
+155.04user 0.06system 0:09.89elapsed 1567%CPU (0avgtext+0avgdata 28756maxresident)k
+0inputs+0outputs (0major+7262minor)pagefaults 0swaps
+154.77user 0.10system 0:09.87elapsed 1568%CPU (0avgtext+0avgdata 28820maxresident)k
+0inputs+0outputs (0major+7294minor)pagefaults 0swaps
+
+# with `codegen-units = 1`, not sure if it's doing anything
+72.06user 0.01system 0:04.63elapsed 1556%CPU (0avgtext+0avgdata 28936maxresident)k
+0inputs+0outputs (0major+7316minor)pagefaults 0swaps
+73.14user 0.04system 0:04.70elapsed 1557%CPU (0avgtext+0avgdata 28800maxresident)k
+0inputs+0outputs (0major+7329minor)pagefaults 0swaps
+76.99user 0.04system 0:04.94elapsed 1558%CPU (0avgtext+0avgdata 28696maxresident)k
+0inputs+0outputs (0major+7311minor)pagefaults 0swaps
+77.14user 0.06system 0:04.95elapsed 1559%CPU (0avgtext+0avgdata 28920maxresident)k
+0inputs+0outputs (0major+7305minor)pagefaults 0swaps
+76.92user 0.06system 0:04.94elapsed 1556%CPU (0avgtext+0avgdata 28720maxresident)k
+0inputs+0outputs (0major+7329minor)pagefaults 0swaps
+77.12user 0.05system 0:04.95elapsed 1558%CPU (0avgtext+0avgdata 28672maxresident)k
+0inputs+0outputs (0major+7304minor)pagefaults 0swaps
+77.64user 0.10system 0:05.07elapsed 1530%CPU (0avgtext+0avgdata 28916maxresident)k
+0inputs+0outputs (0major+7331minor)pagefaults 0swaps
+78.43user 0.12system 0:05.16elapsed 1520%CPU (0avgtext+0avgdata 28920maxresident)k
+0inputs+0outputs (0major+7375minor)pagefaults 0swaps
+77.42user 0.05system 0:04.99elapsed 1550%CPU (0avgtext+0avgdata 28860maxresident)k
+0inputs+0outputs (0major+7334minor)pagefaults 0swaps
+77.35user 0.07system 0:04.96elapsed 1559%CPU (0avgtext+0avgdata 28852maxresident)k
+0inputs+0outputs (0major+7313minor)pagefaults 0swaps
+
+# with `panic = "abort"`. not sure if it's doing anything
+70.92user 0.10system 0:04.55elapsed 1558%CPU (0avgtext+0avgdata 28744maxresident)k
+0inputs+0outputs (0major+7320minor)pagefaults 0swaps
+72.09user 0.03system 0:04.62elapsed 1559%CPU (0avgtext+0avgdata 28872maxresident)k
+0inputs+0outputs (0major+7252minor)pagefaults 0swaps
+75.69user 0.03system 0:04.85elapsed 1559%CPU (0avgtext+0avgdata 28828maxresident)k
+0inputs+0outputs (0major+7317minor)pagefaults 0swaps
+76.27user 0.05system 0:04.89elapsed 1559%CPU (0avgtext+0avgdata 28692maxresident)k
+0inputs+0outputs (0major+7266minor)pagefaults 0swaps
+76.13user 0.05system 0:04.88elapsed 1559%CPU (0avgtext+0avgdata 28676maxresident)k
+0inputs+0outputs (0major+7291minor)pagefaults 0swaps
+76.09user 0.04system 0:04.88elapsed 1558%CPU (0avgtext+0avgdata 28676maxresident)k
+0inputs+0outputs (0major+7301minor)pagefaults 0swaps
+76.09user 0.03system 0:04.88elapsed 1559%CPU (0avgtext+0avgdata 28828maxresident)k
+0inputs+0outputs (0major+7308minor)pagefaults 0swaps
+76.19user 0.03system 0:04.88elapsed 1559%CPU (0avgtext+0avgdata 28904maxresident)k
+0inputs+0outputs (0major+7307minor)pagefaults 0swaps
+76.08user 0.03system 0:04.88elapsed 1559%CPU (0avgtext+0avgdata 28748maxresident)k
+0inputs+0outputs (0major+7303minor)pagefaults 0swaps
+76.23user 0.05system 0:04.90elapsed 1555%CPU (0avgtext+0avgdata 28636maxresident)k
+0inputs+0outputs (0major+7281minor)pagefaults 0swaps
